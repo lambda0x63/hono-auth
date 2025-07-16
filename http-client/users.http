@@ -1,0 +1,30 @@
+### Variables
+@baseUrl = http://localhost:3000
+@contentType = application/json
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWQ2MzBk...
+
+### Read
+GET {{baseUrl}}/users/profile
+Authorization: Bearer {{authToken}}
+
+### Update(name)
+PUT {{baseUrl}}/users/profile
+Content-Type: {{contentType}}
+Authorization: Bearer {{authToken}}
+
+{
+  "name": "newname"
+}
+
+### Update(password)
+PUT {{baseUrl}}/users/profile
+Content-Type: {{contentType}}
+Authorization: Bearer {{authToken}}
+
+{
+  "password": "newpassword123"
+}
+
+### Delete
+DELETE {{baseUrl}}/users/profile
+Authorization: Bearer {{authToken}}
